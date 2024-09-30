@@ -42,7 +42,7 @@ public class Pattern_24
         //     {
         //         System.out.print ( " " ) ;
         //     }
-        //     for ( int j = n + 5 ; j >= ( i *  2 ) ; j-- )
+        //     for ( int j = ( 2 * n ) ; j >= ( i *  2 ) ; j-- )
         //     {
         //         System.out.print ( "*" ) ;
         //     } 
@@ -55,11 +55,10 @@ public class Pattern_24
             {
                 System.out.print ( " " ) ;
             }
-            for ( int j = 1 ; j < ( i *  2 ) ; j++ )
+            for ( int j = 1 ; j < ( i * 2 ) ; j++ )
             {
                 System.out.print ( "*" ) ;
             } 
-            
             System.out.println() ;
         }
     }
