@@ -1,16 +1,16 @@
 /*
 
-     1 
-    1 2 
-   1 2 3 
-  1 2 3 4 
- 1 2 3 4 5 
+*****
+ ****
+  ***
+   **
+    *
 
 */
 
 import java.util.Scanner ;
 
-public class Pattern_21
+public class Pattern_23
 {
     public static void main ( String [] args ) 
     {
@@ -21,14 +21,13 @@ public class Pattern_21
 
         for ( int i = 1 ; i <= n ;  i++ )
         {
-            for ( int j = n ; j >= i ; j-- )
+            for ( int j = 2 ; j <= i ; j++ )
             {
                 System.out.print ( " " ) ;
             }
-
-            for ( int k = 1 ; k <= i ; k++ )
+            for ( int j = n ; j >= i ; j-- )
             {
-                System.out.print ( k + " " ) ;
+                System.out.print ( "*" ) ;
             }
             System.out.println() ;
         }
