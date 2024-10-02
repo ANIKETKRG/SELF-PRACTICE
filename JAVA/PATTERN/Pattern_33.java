@@ -1,6 +1,10 @@
 /*
 
- 
+1
+22
+333
+4444
+55555
 
 */
 
@@ -15,17 +19,13 @@ public class Pattern_33
         System.out.println ( " Enter Number Of Rows : " ) ;
         int n = sc.nextInt() ;
 
-        for ( int i = 1 ; i <= n ;  i++ )
+        for ( int i = 1 ; i <= n ; i++ )
         {
-            for ( int j = 1 ; j <= n ; j++ )
+            for ( int j = 1 ; j <= i ; j++ )
             {
-                if ( i 
+                if ( j <= i )
                 {
-                    System.out.print ( "  " ) ;
-                }
-                else
-                {
-                    System.out.print ( "* " ) ;
+                    System.out.print ( i ) ;
                 }
             }
             System.out.println() ;

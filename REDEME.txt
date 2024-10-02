@@ -1,0 +1,51 @@
+<script>
+            let currentSlide = 0;
+        let autoSlideInterval;
+
+        function moveSlide(index) {
+            const recommendations = document.querySelector('.recommendations');
+            const slides = document.querySelectorAll('.recommendation-card');
+            const totalSlides = slides.length;
+            const slideWidth = slides[0].clientWidth + 20; // card width + margin
+
+            recommendations.style.transform = `translateX(-${index * slideWidth}px)`;
+            currentSlide = index;
+
+            updatePagination();
+        }
+
+        function updatePagination() {
+            const paginationDots = document.querySelectorAll('.pagination span');
+            paginationDots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                currentSlide = (currentSlide + 1) % 3;
+                moveSlide(currentSlide);
+            }, 1000);
+        }
+
+        function stopAutoSlide() {
+            clearInterval(autoSlideInterval);
+        }
+
+        document.querySelectorAll('.recommendation-card').forEach(card => {
+            card.addEventListener('mouseover', () => {
+                stopAutoSlide();
+                card.style.transform = 'translateX(20px)';
+            });
+
+            card.addEventListener('mouseout', () => {
+                startAutoSlide();
+                card.style.transform = 'translateX(0)';
+            });
+        });
+
+        </script>
