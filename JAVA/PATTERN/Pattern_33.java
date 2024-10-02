@@ -8,6 +8,7 @@
 
 */
 
+
 import java.util.Scanner ;
 
 public class Pattern_33
