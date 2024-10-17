@@ -50,6 +50,7 @@ public class Pattern_42
                 System.out.print ( "* " ) ;
             }
             System.out.println () ;
+        //
         }
     }
 }
